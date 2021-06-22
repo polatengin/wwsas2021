@@ -4,5 +4,13 @@
   "forwardPorts": [ 5000 ],
   "runArgs": [ "-v", "/var/run/docker.sock:/var/run/docker.sock" ],
   "extensions": [
+    "ms-dotnettools.csharp",
+    "golang.go",
+    "ms-vscode.vscode-node-azure-pack",
+    "durablefunctionsmonitor.durablefunctionsmonitor",
+    "ms-azuretools.vscode-docker",
+    "editorconfig.editorconfig",
+    "vscode-icons-team.vscode-icons",
+    "humao.rest-client"
   ]
 }
