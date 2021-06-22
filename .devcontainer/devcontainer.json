@@ -1,4 +1,5 @@
 {
   "name": "Development Environment",
   "dockerFile": "Dockerfile",
+  "forwardPorts": [ 5000 ],
 }
