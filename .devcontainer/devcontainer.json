@@ -3,4 +3,6 @@
   "dockerFile": "Dockerfile",
   "forwardPorts": [ 5000 ],
   "runArgs": [ "-v", "/var/run/docker.sock:/var/run/docker.sock" ],
+  "extensions": [
+  ]
 }
