@@ -9,6 +9,7 @@
         "path": "/bin/bash"
       }
     },
+    "workbench.iconTheme": "vscode-icons"
   },
   "extensions": [
     "ms-dotnettools.csharp",
