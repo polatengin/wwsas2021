@@ -4,6 +4,11 @@
   "forwardPorts": [ 5000 ],
   "runArgs": [ "-v", "/var/run/docker.sock:/var/run/docker.sock" ],
   "settings": {
+    "terminal.integrated.profiles.linux": {
+      "bash": {
+        "path": "/bin/bash"
+      }
+    },
   },
   "extensions": [
     "ms-dotnettools.csharp",
