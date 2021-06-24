@@ -24,6 +24,12 @@ RUN apt-get update \
     # Install Node
     && curl -sL https://deb.nodesource.com/setup_15.x | bash - \
     && apt-get install -y nodejs \
+    #
+    # Install DotNet 5
+    && wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb \
+    && dpkg -i packages-microsoft-prod.deb \
+    && apt-get update \
+    && apt-get install -y dotnet-sdk-5.0 \
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
