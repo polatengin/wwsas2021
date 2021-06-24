@@ -11,6 +11,8 @@ ARG USER_GID=$USER_UID
 RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils dialog libicu63 libssl1.1 2>&1 \
     #
+    # Verify wget, jq, unzip, git and process tools installed
+    && apt-get -y install git iproute2 procps wget unzip jq \
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
