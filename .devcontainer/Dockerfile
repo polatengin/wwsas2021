@@ -45,6 +45,12 @@ RUN apt-get update \
     #
     # Install Helm
     && curl -sL https://git.io/get_helm.sh | bash \
+    #
+    # Install Terraform
+    && CURR_VER=$(curl -s https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r -M '.current_version') \
+    && wget https://releases.hashicorp.com/terraform/${CURR_VER}/terraform_${CURR_VER}_linux_amd64.zip \
+    && unzip terraform_${CURR_VER}_linux_amd64.zip -d /usr/local/bin/ \
+    && rm -rf terraform_${CURR_VER}_linux_amd64.zip \
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
