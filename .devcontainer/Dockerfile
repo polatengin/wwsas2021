@@ -30,6 +30,9 @@ RUN apt-get update \
     && dpkg -i packages-microsoft-prod.deb \
     && apt-get update \
     && apt-get install -y dotnet-sdk-5.0 \
+    #
+    # Install global packages
+    && npm install npm-check-updates -g \
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
