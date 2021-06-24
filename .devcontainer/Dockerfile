@@ -33,6 +33,9 @@ RUN apt-get update \
     #
     # Install global packages
     && npm install npm-check-updates -g \
+    #
+    # Install Azure CLI
+    && curl -sL https://aka.ms/InstallAzureCLIDeb | bash \
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
