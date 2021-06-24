@@ -42,6 +42,9 @@ RUN apt-get update \
     && echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | tee -a /etc/apt/sources.list.d/kubernetes.list \
     && apt-get update \
     && apt-get install -y kubectl \
+    #
+    # Install Helm
+    && curl -sL https://git.io/get_helm.sh | bash \
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
