@@ -32,3 +32,12 @@ echo "Creating Azure Kubernetes Service..."
 AVAILABLE_AKS_VERSION=`az aks get-versions --location "${LOCATION}" --query "orchestrators[-1].orchestratorVersion" --output tsv`
 
 az aks create --name "${PROJECT_NAME}-aks" --resource-group "${PROJECT_NAME}-rg" --attach-acr "$ACR_ID" --kubernetes-version "${AVAILABLE_AKS_VERSION}" --no-ssh-key --output none
+
+echo "Setting Azure Kubernetes Service Credentials..."
+
+kubectl config unset users
+kubectl config unset current-context
+kubectl config unset contexts
+kubectl config unset clusters
+
+az aks get-credentials --name "${PROJECT_NAME}-aks" --resource-group "${PROJECT_NAME}-rg" --output none
