@@ -1,1 +1,4 @@
 name: ci_api_product
+
+on:
+  workflow_dispatch:
