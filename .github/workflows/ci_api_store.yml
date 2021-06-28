@@ -2,3 +2,8 @@ name: ci_api_store
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/api-store/**"
