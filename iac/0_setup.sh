@@ -52,10 +52,6 @@ then
   az acr login --name "${PROJECT_NAME}acr"
 fi
 
-echo "Creating a Namespace in Kubernetes for this project"
-
-kubectl create namespace "project" --dry-run=client -o yaml | kubectl apply -f -
-
 echo "Installing nginx as the Ingress Controller into the Kubernetes"
 
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud/deploy.yaml
