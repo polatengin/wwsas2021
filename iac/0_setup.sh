@@ -22,3 +22,8 @@ az group create --name "${PROJECT_NAME}-rg" --location "${LOCATION}" --output no
 echo "Creating Azure Container Registry..."
 
 az acr create --name "${PROJECT_NAME}acr" --resource-group "${PROJECT_NAME}-rg" --sku Basic --admin-enabled true --output none
+
+echo "Getting ACR_ID..."
+
+ACR_ID=`az acr show --name "${PROJECT_NAME}acr" --resource-group "${PROJECT_NAME}-rg" --query "id" --output tsv`
+
