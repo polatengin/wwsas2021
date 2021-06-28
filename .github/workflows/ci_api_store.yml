@@ -1,1 +1,4 @@
 name: ci_api_store
+
+on:
+  workflow_dispatch:
