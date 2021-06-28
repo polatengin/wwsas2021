@@ -19,3 +19,10 @@ spec:
             name: product-service
             port:
               number: 80
+      - path: /api/store/(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: store-service
+            port:
+              number: 80
