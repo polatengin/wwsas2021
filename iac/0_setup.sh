@@ -55,3 +55,7 @@ fi
 echo "Installing nginx as the Ingress Controller into the Kubernetes"
 
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud/deploy.yaml
+
+echo "Configuring nginx"
+
+kubectl apply -f ./1_ingress.yml
