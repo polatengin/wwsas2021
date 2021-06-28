@@ -6,6 +6,6 @@ COPY ./package*.json ./
 
 RUN npm install
 
-COPY ./api-store/ ./
+COPY . .
 
 ENTRYPOINT [ "npm", "run", "start" ]
