@@ -2,3 +2,8 @@ name: ci_api_product
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/api-product/**"
