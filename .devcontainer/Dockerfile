@@ -50,7 +50,10 @@ RUN apt-get update \
     && apt-get install -y kubectl \
     #
     # Install Helm
-    && curl -sL https://git.io/get_helm.sh | bash \
+    && curl https://baltocdn.com/helm/signing.asc | apt-key add - \
+    && echo "deb https://baltocdn.com/helm/stable/debian/ all main" | tee /etc/apt/sources.list.d/helm-stable-debian.list \
+    && apt-get update \
+    && apt-get install helm \
     #
     # Install Terraform
     && CURR_VER=$(curl -s https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r -M '.current_version') \
