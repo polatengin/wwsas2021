@@ -18,3 +18,7 @@ fi
 echo "Creating Resource Group..."
 
 az group create --name "${PROJECT_NAME}-rg" --location "${LOCATION}" --output none
+
+echo "Creating Azure Container Registry..."
+
+az acr create --name "${PROJECT_NAME}acr" --resource-group "${PROJECT_NAME}-rg" --sku Basic --admin-enabled true --output none
