@@ -7,3 +7,9 @@ on:
       - main
     paths:
       - "src/web-frontend/**"
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
