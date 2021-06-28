@@ -2,3 +2,8 @@ name: ci_web_frontend
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/web-frontend/**"
