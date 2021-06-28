@@ -15,3 +15,6 @@ then
   az login
 fi
 
+echo "Creating Resource Group..."
+
+az group create --name "${PROJECT_NAME}-rg" --location "${LOCATION}" --output none
