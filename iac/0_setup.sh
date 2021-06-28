@@ -75,3 +75,7 @@ echo "Configuring nginx"
 kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission
 
 kubectl apply -f ./1_ingress.yml
+
+echo "Setting a GitHub Secret for GitHub Actions"
+
+AZURE_CREDENTIALS=$(az ad sp create-for-rbac --name wwsas2021 --sdk-auth)
