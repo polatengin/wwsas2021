@@ -11,21 +11,21 @@ spec:
   rules:
   - http:
       paths:
-      - path: /api/product/(.*)
+      - path: /api/product(/|$)(.*)
         pathType: Prefix
         backend:
           service:
             name: product-service
             port:
               number: 80
-      - path: /api/store/(.*)
+      - path: /api/store(/|$)(.*)
         pathType: Prefix
         backend:
           service:
             name: store-service
             port:
               number: 80
-      - path: /api/user/(.*)
+      - path: /api/user(/|$)(.*)
         pathType: Prefix
         backend:
           service:
