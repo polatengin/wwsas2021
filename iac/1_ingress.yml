@@ -12,3 +12,10 @@ spec:
   rules:
   - http:
       paths:
+      - path: /api/product/(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: product-service
+            port:
+              number: 80
