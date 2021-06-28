@@ -8,6 +8,8 @@ COPY . /app
 
 RUN npm install
 
+RUN npm run build
+
 FROM nginx:1.19.7-alpine as production
 
 USER root
