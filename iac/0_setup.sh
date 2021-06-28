@@ -24,7 +24,7 @@ LOGIN_COUNT=`az account list --query "length([])"`
 
 if [[ ${LOGIN_COUNT} -eq 0 ]]
 then
-  az login
+  az login --output none
 fi
 
 echo "Creating Resource Group..."
