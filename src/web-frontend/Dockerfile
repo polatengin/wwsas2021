@@ -4,7 +4,7 @@ RUN apt-get update
 
 WORKDIR /app
 
-COPY . /app
+COPY ./package*.json .
 
 RUN npm install
 
