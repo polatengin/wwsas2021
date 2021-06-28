@@ -1,1 +1,4 @@
 name: ci_api_user
+
+on:
+  workflow_dispatch:
