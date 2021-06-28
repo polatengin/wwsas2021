@@ -7,3 +7,9 @@ on:
       - main
     paths:
       - "src/api-store/**"
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
