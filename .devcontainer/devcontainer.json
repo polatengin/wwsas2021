@@ -3,6 +3,7 @@
   "dockerFile": "Dockerfile",
   "forwardPorts": [ 5000 ],
   "runArgs": [ "-v", "/var/run/docker.sock:/var/run/docker.sock" ],
+  "postCreateCommand": "gh auth login --web",
   "settings": {
     "terminal.integrated.profiles.linux": {
       "bash": {
