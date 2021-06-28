@@ -28,6 +28,10 @@ namespace api_user
 
       app.UseEndpoints(endpoints =>
       {
+        endpoints.MapGet("/", async context =>
+        {
+          await context.Response.WriteAsync($"Hello WorldWide Software Architecture Summit 2021!");
+        });
       });
     }
   }
