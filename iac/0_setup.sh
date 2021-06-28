@@ -51,3 +51,7 @@ then
   echo "Logging-in to Azure Container Registry through Docker CLI"
   az acr login --name "${PROJECT_NAME}acr"
 fi
+
+echo "Creating a Namespace in Kubernetes for this project"
+
+kubectl create namespace "project" --dry-run=client -o yaml | kubectl apply -f -
