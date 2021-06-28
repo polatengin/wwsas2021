@@ -18,3 +18,29 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: deploy new version
+        env:
+          AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+        run: |
+          cd ./src/api-product/
+
+          PROJECT_NAME="wwsas2021"
+
+          az aks get-credentials --name "${PROJECT_NAME}-aks" --resource-group "${PROJECT_NAME}-rg" --output none
+
+          echo "Publishing..."
+
+          TAG="v$(date '+%Y%m%d%H%M%S')"
+
+          echo "Start deployment on $PWD"
+
+          ACR_URL=`az acr show --name "${PROJECT_NAME}acr" --resource-group "${PROJECT_NAME}-rg" --query "loginServer" --output tsv`
+
+          IMAGE="${PWD##*/}:${TAG}"
+
+          az acr build -t "${PROJECT_NAME}/${IMAGE}" --registry "${PROJECT_NAME}acr" -f "./Dockerfile" .
+
+          cat ./deploy.yml | sed s/"{IMAGE}"/"${ACR_URL}\/${PROJECT_NAME}\/${IMAGE}"/g | kubectl apply -f -
+
+          echo "...done"
