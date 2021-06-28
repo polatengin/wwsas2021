@@ -26,3 +26,10 @@ spec:
             name: store-service
             port:
               number: 80
+      - path: /api/user/(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: user-service
+            port:
+              number: 80
