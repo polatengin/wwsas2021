@@ -7,3 +7,11 @@ if [[ -z ${AZURE_CLI_EXISTS} ]]; then
 
   curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 fi
+
+LOGIN_COUNT=`az account list --query "length([])"`
+
+if [[ ${LOGIN_COUNT} -eq 0 ]]
+then
+  az login
+fi
+
