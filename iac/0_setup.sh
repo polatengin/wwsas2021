@@ -72,4 +72,6 @@ helm install nginx-ing nginx-stable/nginx-ingress
 
 echo "Configuring nginx"
 
+kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission
+
 kubectl apply -f ./1_ingress.yml
