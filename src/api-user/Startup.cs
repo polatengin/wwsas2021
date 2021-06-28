@@ -32,6 +32,18 @@ namespace api_user
         {
           await context.Response.WriteAsync($"Hello WorldWide Software Architecture Summit 2021 ({ Environment.MachineName })!");
         });
+
+        endpoints.MapPost("/get-user-list", async context =>
+        {
+          var userList = Enumerable.Range(1, random.Next(5, 15)).Select(index => new
+          {
+            BirthDate = DateTime.Now.AddDays(index),
+            Salary = ((random.NextDouble() * 100000) + 50000).ToString("0.##"),
+            Name = words[random.Next(words.Length)] + " " + words[random.Next(words.Length)],
+            ProfilePictureUrl = "https://i.pravatar.cc/50?" + random.Next(1, 1000)
+          });
+
+          await context.Response.WriteAsync("Hello World!");
         });
       });
     }
