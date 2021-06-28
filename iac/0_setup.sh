@@ -66,7 +66,9 @@ fi
 
 echo "Installing nginx as the Ingress Controller into the Kubernetes"
 
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/cloud/deploy.yaml
+helm repo add nginx-stable https://helm.nginx.com/stable
+
+helm install nginx-ing nginx-stable/nginx-ingress
 
 echo "Configuring nginx"
 
