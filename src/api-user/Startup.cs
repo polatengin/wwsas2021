@@ -30,7 +30,8 @@ namespace api_user
       {
         endpoints.MapGet("/", async context =>
         {
-          await context.Response.WriteAsync($"Hello WorldWide Software Architecture Summit 2021!");
+          await context.Response.WriteAsync($"Hello WorldWide Software Architecture Summit 2021 ({ Environment.MachineName })!");
+        });
         });
       });
     }
