@@ -79,8 +79,6 @@ helm install nginx-ingress ingress-nginx/ingress-nginx \
 
 echo "Configuring nginx"
 
-kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission
-
 kubectl apply -f ./1_ingress.yml
 
 echo "Setting a GitHub Secret for GitHub Actions"
