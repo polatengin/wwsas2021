@@ -70,6 +70,6 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 
 echo "Setting a GitHub Secret for GitHub Actions"
 
-AZURE_CREDENTIALS=$(az ad sp create-for-rbac --name wwsas2021 --sdk-auth)
+AZURE_CREDENTIALS=$(az ad sp create-for-rbac --name "wwsas2021" --role Contributor --sdk-auth)
 
 gh secret set "AZURE_CREDENTIALS" -b "${AZURE_CREDENTIALS}"
