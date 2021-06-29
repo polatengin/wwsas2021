@@ -82,4 +82,4 @@ echo "Setting a GitHub Secret for GitHub Actions"
 
 AZURE_CREDENTIALS=$(az ad sp create-for-rbac --name wwsas2021 --sdk-auth)
 
-gh secret set AZURE_CREDENTIALS -b "${AZURE_CREDENTIALS}"
+gh secret set "AZURE_CREDENTIALS" -b "${AZURE_CREDENTIALS}"
