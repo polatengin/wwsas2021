@@ -39,9 +39,9 @@ echo "Getting ACR_ID..."
 
 ACR_ID=`az acr show --name "${PROJECT_NAME}acr" --resource-group "${PROJECT_NAME}-rg" --query "id" --output tsv`
 
-echo "Creating Azure Kubernetes Service..."
+AVAILABLE_AKS_VERSION=$(az aks get-versions --location "${LOCATION}" --query "(orchestrators[?default == \`true\`].orchestratorVersion)[0]" --output tsv)
 
-AVAILABLE_AKS_VERSION=`az aks get-versions --location "${LOCATION}" --query "orchestrators[-1].orchestratorVersion" --output tsv`
+echo "Creating Azure Kubernetes Service (v${AVAILABLE_AKS_VERSION})..."
 
 az aks create --name "${PROJECT_NAME}-aks" --resource-group "${PROJECT_NAME}-rg" --attach-acr "$ACR_ID" --kubernetes-version "${AVAILABLE_AKS_VERSION}" --no-ssh-key --output none
 
