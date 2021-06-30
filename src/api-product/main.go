@@ -19,7 +19,7 @@ func main() {
 	http.HandleFunc("/get-list", func(w http.ResponseWriter, r *http.Request) {
 		productList := ProductList{
 			Product{
-				Name:    "Product 1",
+				Name:    "Berry Mix Organic Bar",
 				Price:   14.80,
 				InStock: true,
 				Rating:  4,
