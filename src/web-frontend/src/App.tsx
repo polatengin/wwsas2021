@@ -22,7 +22,9 @@ export const App: FunctionComponent = () => {
         <UserIcon className="w-6 h-6" />
       </header>
       <main className="flex-grow">
-        adasd
+        <div>
+          HERO
+        </div>
       </main>
       <footer className="my-4">
       </footer>
