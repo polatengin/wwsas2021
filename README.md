@@ -59,3 +59,9 @@ We can define;
     "humao.rest-client"
   ]
   ```
+
+  forwarded ports from inside of the DevContainer to host machine
+
+  ```json
+  "forwardPorts": [ 5000 ],
+  ```
