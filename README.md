@@ -44,3 +44,18 @@ We can define;
     "workbench.iconTheme": "vscode-icons"
   },
   ```
+
+  extensions that are gonna installed to Visual Studio
+
+  ```json
+  "extensions": [
+    "ms-dotnettools.csharp",
+    "golang.go",
+    "ms-vscode.vscode-node-azure-pack",
+    "durablefunctionsmonitor.durablefunctionsmonitor",
+    "ms-azuretools.vscode-docker",
+    "editorconfig.editorconfig",
+    "vscode-icons-team.vscode-icons",
+    "humao.rest-client"
+  ]
+  ```
