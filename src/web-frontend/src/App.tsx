@@ -31,6 +31,13 @@ export const App: FunctionComponent = () => {
           <span className="flex-grow"></span>
           <span>View all ▸</span>
         </div>
+        <div>
+          {productList.map(product => {
+            <div>
+              asdasd
+            </div>
+          })}
+        </div>
       </main>
       <footer className="my-4">
       </footer>
