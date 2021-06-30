@@ -5,3 +5,5 @@ Properties/
 dist/
 
 package-lock.json
+
+bundle.css
