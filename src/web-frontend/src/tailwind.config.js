@@ -3,4 +3,5 @@ module.exports = {
     "./src/**/*.html",
     "./src/**/*.tsx",
   ],
+  darkMode: "class",
 }
