@@ -8,7 +8,7 @@ interface IconProps {
 
 export const StoreLogoIcon: FunctionComponent<IconProps> = (props: IconProps) => {
   return (
-    <svg viewBox="0 0 511 511" fill="none" className={props.className} onClick={props.onClick}>
+    <svg viewBox="0 0 511 511" stroke="currentColor" className={props.className} onClick={props.onClick}>
       <path d="M503.5,440H479V207.433c13.842-3.487,24-16.502,24-31.933v-104c0-8.547-6.953-15.5-15.5-15.5h-464
         C14.953,56,8,62.953,8,71.5v104c0,15.432,10.158,28.446,24,31.933V440H7.5c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5h496
         c4.142,0,7.5-3.358,7.5-7.5S507.642,440,503.5,440z M488,71.5v104c0,9.383-6.999,17.384-15.602,17.834
