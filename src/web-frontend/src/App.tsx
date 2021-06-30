@@ -25,6 +25,12 @@ export const App: FunctionComponent = () => {
         <div>
           HERO
         </div>
+        <div className="flex">
+          <TagIcon className="w-6 h-6" />
+          <span>Discounted Products</span>
+          <span className="flex-grow"></span>
+          <span>View all ▸</span>
+        </div>
       </main>
       <footer className="my-4">
       </footer>
