@@ -12,3 +12,5 @@ As a speaker in the event, I prepared this repo as a guideline to build a soluti
 * No vendor lock, must be publishable to other cloud providers
 * All components must live inside of a Kubernetes cluster
 * Easy scalability using Kubernetes deployments
+
+I'd like to see you in my session ([Building and Automating a solution with Microservices approaches using .Net, Go, Node, Kubernetes and GitHub Actions](https://geekle.us/software_architecture)), so we can discuss the solution even further.
