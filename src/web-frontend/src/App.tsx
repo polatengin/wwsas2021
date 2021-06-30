@@ -34,10 +34,12 @@ export const App: FunctionComponent = () => {
           <span>View all ▸</span>
         </div>
         <div>
-          {productList.map(product => {
-            <div>
-              asdasd
-            </div>
+          {productList.map((product, index) => {
+            return (
+              <div key={index}>
+                asdasd
+              </div>
+            );
           })}
         </div>
       </main>
