@@ -18,8 +18,17 @@ type ProductList []Product
 func main() {
 	http.HandleFunc("/get-list", func(w http.ResponseWriter, r *http.Request) {
 		productList := ProductList{
-			Product{Name: "LED TV"},
-			Product{Name: "Coffee Maker"},
+			Product{
+				Name:    "Product 1",
+				Price:   14.80,
+				InStock: true,
+				Rating:  4,
+			},
+			Product{
+				Name:    "Coffee Maker",
+				Price:   57.90,
+				InStock: true,
+				Rating:  5},
 		}
 
 		w.Header().Set("Content-Type", "application/json")
