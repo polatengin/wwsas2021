@@ -16,7 +16,7 @@ type Product struct {
 type ProductList []Product
 
 func main() {
-	http.HandleFunc("/get-product-list", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/get-list", func(w http.ResponseWriter, r *http.Request) {
 		productList := ProductList{
 			Product{Name: "LED TV"},
 			Product{Name: "Coffee Maker"},
