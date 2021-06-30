@@ -9,6 +9,7 @@ export const App: FunctionComponent = () => {
     const getProductList = async () => {
       const response = await fetch("/api/product/get-list");
       const data = await response.json();
+      setProductList(data);
     };
     getProductList();
   }, []);
