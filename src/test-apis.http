@@ -1,7 +1,13 @@
-GET http://localhost:5000
+@AKS_IP = <IP_WILL_COME_HERE>
+
+GET http://{{AKS_IP}}/api/user
 
 ###
 
-POST http://localhost:5000/get-user-list
+GET http://{{AKS_IP}}/api/user/
+
+###
+
+POST http://{{AKS_IP}}/api/user/get-user-list
 
 ###
