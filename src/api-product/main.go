@@ -5,14 +5,13 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"time"
 )
 
 type Product struct {
-	Name            string
-	Price           float32
-	InStock         bool
-	CampaignStartOn time.Time
+	Name    string
+	Price   float32
+	InStock bool
+	Rating  int
 }
 type ProductList []Product
 
