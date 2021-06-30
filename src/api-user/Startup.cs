@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Text.Json;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -35,7 +36,7 @@ namespace api_user
 
         endpoints.MapPost("/get-user-list", async context =>
         {
-          var userList = Enumerable.Range(1, random.Next(5, 15)).Select(index => new
+          var list = Enumerable.Range(1, random.Next(5, 15)).Select(index => new
           {
             BirthDate = DateTime.Now.AddDays(index),
             Salary = ((random.NextDouble() * 100000) + 50000).ToString("0.##"),
@@ -43,7 +44,7 @@ namespace api_user
             ProfilePictureUrl = "https://i.pravatar.cc/50?" + random.Next(1, 1000)
           });
 
-          await context.Response.WriteAsync("Hello World!");
+          await JsonSerializer.SerializeAsync(context.Response.Body, list);
         });
       });
     }
