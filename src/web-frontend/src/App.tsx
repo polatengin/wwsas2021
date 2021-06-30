@@ -3,6 +3,7 @@ import React, { FunctionComponent, useEffect } from 'react';
 import { ShoppingCartIcon, StoreLogoIcon, UserIcon } from './Icons';
 
 export const App: FunctionComponent = () => {
+  const [productList, setProductList] = useState([]);
 
   useEffect(() => {
     const getProductList = async () => {
