@@ -17,8 +17,8 @@
     "web-vitals": "2.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npx tailwindcss-cli build -i ./src/index.css -o ./src/bundle.css && react-scripts start",
+    "build": "NODE_ENV=production npx tailwindcss-cli build -i ./src/index.css -o ./src/bundle.css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
