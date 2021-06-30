@@ -65,3 +65,11 @@ We can define;
   ```json
   "forwardPorts": [ 5000 ],
   ```
+
+  bash commands that is gonna run after DevContainer created
+
+  _In this example, we're starting login process of the GitHub CLI tool. So we ensure that the development environment has the GitHub CLI logged in after it's created_
+
+  ```json
+  "postCreateCommand": "gh auth login --web",
+  ```
