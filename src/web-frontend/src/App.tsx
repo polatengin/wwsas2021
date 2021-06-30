@@ -3,6 +3,15 @@ import React, { FunctionComponent, useEffect } from 'react';
 import { ShoppingCartIcon, StoreLogoIcon, UserIcon } from './Icons';
 
 export const App: FunctionComponent = () => {
+
+  useEffect(() => {
+    const getProductList = async () => {
+      const response = await fetch("/api/product/get-list");
+      const data = await response.json();
+    };
+    getProductList();
+  }, []);
+
   return (
     <div className="flex flex-col bg-gray-300 h-3/4 px-4 rounded-xl">
       <header className="flex my-4 items-center">
