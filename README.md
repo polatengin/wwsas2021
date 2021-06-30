@@ -31,3 +31,16 @@ We can define;
   ```json
   "name": "Development Environment",
   ```
+
+  settings that are gonna applied to Visual Studio Code
+
+  ```json
+  "settings": {
+    "terminal.integrated.profiles.linux": {
+      "bash": {
+        "path": "/bin/bash"
+      }
+    },
+    "workbench.iconTheme": "vscode-icons"
+  },
+  ```
