@@ -73,3 +73,16 @@ We can define;
   ```json
   "postCreateCommand": "gh auth login --web",
   ```
+
+Create .editorconfig file at the root of the solution
+
+```ini
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+```
