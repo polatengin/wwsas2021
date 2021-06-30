@@ -5,3 +5,7 @@
 body {
   @apply bg-gray-100;
 }
+
+div#root {
+  @apply w-screen h-screen p-10;
+}
