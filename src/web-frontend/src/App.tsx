@@ -32,12 +32,24 @@ export const App: FunctionComponent = () => {
         <UserIcon className="w-6 h-6" />
       </header>
       <main className="flex-grow">
-        <div>
-          HERO
+        <div className="bg-gray-300 rounded-xl p-4 mb-4 flex">
+          <div className="flex-grow">
+            <h1 className="text-2xl">
+              <span className="block text-gray-800">Online Shopping</span>
+              <span className="block text-green-600">Buy to be happier 🥳</span>
+            </h1>
+            <p className="my-4 text-base text-gray-500 text-lg">
+              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+            </p>
+            <span className="inline-block cursor-pointer rounded-md shadow px-4 py-2 border border-transparent text-lg font-medium rounded-md text-white bg-green-600 hover:bg-green-700">
+              Get started
+            </span>
+          </div>
+          <img className="rounded-xl shadow" src="https://picsum.photos/300/200?color&random=2954" />
         </div>
-        <div className="flex">
-          <TagIcon className="w-6 h-6" />
-          <span>Discounted Products</span>
+        <div className="flex items-center">
+          <TagIcon className="w-6 h-6 mr-2" />
+          <span className="text-xl">Discounted Products</span>
           <span className="flex-grow"></span>
           <span>View all ▸</span>
         </div>
