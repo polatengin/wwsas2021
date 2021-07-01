@@ -61,16 +61,24 @@ export const App: FunctionComponent = () => {
           {userDialogMode &&
             <div className="absolute top-10 -inset-x-10 bg-white p-3 border border-gray-400 text-center rounded-md">
               <div className="absolute top-0 w-4 h-4 transform rotate-45 -translate-y-2 inset-x-1/2 -translate-x-1/2 bg-white border-t border-l border-gray-400"></div>
-              <input placeholder="username" type="text" value={userName} onChange={onUserNameChange} className="focus:outline-none w-full border shadow my-1" />
-              <input placeholder="password" type="password" value={password} onChange={onPasswordChange} className="focus:outline-none w-full border shadow my-1" />
-              <button className="border shadow bg-blue-400 text-white w-full whitespace-nowrap my-1" onClick={async () => {
-                const response = await fetch("/api/user/login", {
-                  method: "POST",
-                  body: JSON.stringify({ userName, password })
-                });
-                const data = await response.json();
-                console.log(data);
-              }}>Login</button>
+              {currentUser === null ?
+                <>
+                  <input placeholder="username" type="text" value={userName} onChange={onUserNameChange} className="focus:outline-none w-full border shadow my-1" />
+                  <input placeholder="password" type="password" value={password} onChange={onPasswordChange} className="focus:outline-none w-full border shadow my-1" />
+                  <button className="border shadow bg-blue-400 text-white w-full whitespace-nowrap my-1" onClick={async () => {
+                    const response = await fetch("/api/user/login", {
+                      method: "POST",
+                      body: JSON.stringify({ userName, password })
+                    });
+                    const data = await response.json();
+                    setCurrentUser(data);
+                  }}>Login</button>
+                </> :
+                <button className="border shadow bg-blue-400 text-white w-full whitespace-nowrap my-1" onClick={async () => {
+                  setCurrentUser(null);
+                  setUserDialogMode(false);
+                }}>Logout</button>
+              }
             </div>
           }
         </div>
