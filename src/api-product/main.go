@@ -25,7 +25,7 @@ func main() {
 				Price:    14.80,
 				InStock:  true,
 				Rating:   4,
-				ImageUrl: fmt.Sprintf("https://picsum.photos/50?color&random=%d", rand.Intn(10000)),
+				ImageUrl: fmt.Sprintf("https://picsum.photos/100?color&random=%d", rand.Intn(99999)),
 			},
 			Product{
 				Name:     "RXBar Chocolate Sea Salt",
