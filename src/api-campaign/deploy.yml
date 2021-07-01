@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: store-deployment
+  name: campaign-deployment
   labels:
-    app: store
+    app: campaign
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: store
+      app: campaign
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -17,10 +17,10 @@ spec:
   template:
     metadata:
       labels:
-        app: store
+        app: campaign
     spec:
       containers:
-      - name: store
+      - name: campaign
         image: "{IMAGE}"
         ports:
         - containerPort: 5000
@@ -28,10 +28,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: store-service
+  name: campaign-service
 spec:
   selector:
-    app: store
+    app: campaign
   ports:
   - protocol: TCP
     port: 80
