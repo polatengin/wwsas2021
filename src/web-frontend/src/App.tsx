@@ -58,6 +58,7 @@ export const App: FunctionComponent = () => {
                   body: JSON.stringify({ userName, password })
                 });
                 const data = await response.json();
+                console.log(data);
               }}>Login</button>
             </div>
           }
