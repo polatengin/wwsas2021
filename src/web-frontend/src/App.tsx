@@ -60,8 +60,8 @@ export const App: FunctionComponent = () => {
         </div>
       </header>
       <main className="flex-grow">
-        <div className="bg-gray-300 rounded-xl p-4 mb-4 flex">
-          <div className="flex-grow">
+        <div className="bg-gray-300 rounded-xl mb-4 flex">
+          <div className="flex-grow m-4">
             <h1 className="text-2xl">
               <span className="block text-gray-800">Online Shopping</span>
               <span className="block text-green-600">Buy to be happier 🥳</span>
