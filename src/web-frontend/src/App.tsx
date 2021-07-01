@@ -36,7 +36,10 @@ export const App: FunctionComponent = () => {
   }, []);
 
   return (
-    <div className="flex flex-col bg-gray-200 h-3/4 px-4 rounded-xl">
+    <div className="flex flex-col bg-gray-200 h-min-3/4 px-4 rounded-xl">
+      {userDialogMode &&
+        <div className="absolute inset-0 bg-gray-700 bg-opacity-25" onClick={() => setUserDialogMode(false)}></div>
+      }
       <header className="flex my-4 items-center">
         <StoreLogoIcon className="w-10 h-10 mr-2" />
         <span className="text-3xl">WorldWide Software Architecture Summit</span>
