@@ -79,7 +79,7 @@ export const App: FunctionComponent = () => {
           <TagIcon className="w-6 h-6 mr-2" />
           <span className="text-xl">Discounted Products</span>
           <span className="flex-grow"></span>
-          <span className="cursor-pointer">View all ▸</span>
+          <span className="cursor-pointer" onClick={() => setPageProductList( pageProductList.length === 5 ? apiProductList : apiProductList.slice(0, 5))}>View all ▸</span>
         </div>
           {pageProductList.map((product, index) => {
             return (
