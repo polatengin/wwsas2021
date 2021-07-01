@@ -104,7 +104,7 @@ Let's start building the development environment
   * [Terraform](https://github.com/polatengin/wwsas2021/blob/main/.devcontainer/Dockerfile#L58)
   * [kubectl](https://github.com/polatengin/wwsas2021/blob/main/.devcontainer/Dockerfile#L46)
 
-Create [.editorconfig](./.editorconfig) file at the root of the solution
+* Create [.editorconfig](./.editorconfig) file at the root of the solution
 
 ```ini
 root = true
@@ -117,7 +117,7 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 ```
 
-Create [.gitignore](./.gitignore) file at the root of the solution and ignore unneeded files from the git system, for example,
+* Create [.gitignore](./.gitignore) file at the root of the solution and ignore unneeded files from the git system, for example,
 
 ```ìni
 bin/
@@ -131,5 +131,3 @@ bundle.css
 ```
 
 ## Infrastructure as Code
-
-asd
