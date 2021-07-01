@@ -74,7 +74,9 @@ We can define;
   "postCreateCommand": "gh auth login --web",
   ```
 
-Create .editorconfig file at the root of the solution
+Create [Dockerfile](./.devcontainer/Dockerfile) under the [.devcontainer](./.devcontainer/) folder
+
+Create [.editorconfig](./.editorconfig) file at the root of the solution
 
 ```ini
 root = true
