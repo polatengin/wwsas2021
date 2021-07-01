@@ -28,8 +28,8 @@ func main() {
 				ImageUrl: fmt.Sprintf("https://picsum.photos/50?color&random=%d", rand.Intn(10000)),
 			},
 			Product{
-				Name:     "Coffee Maker",
-				Price:    57.90,
+				Name:     "RXBar Chocolate Sea Salt",
+				Price:    38.90,
 				InStock:  true,
 				Rating:   5,
 				ImageUrl: fmt.Sprintf("https://picsum.photos/50?color&random=%d", rand.Intn(10000)),
