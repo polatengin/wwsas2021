@@ -18,11 +18,11 @@ spec:
             name: product-service
             port:
               number: 80
-      - path: /api/store/(.*)
+      - path: /api/campaign/(.*)
         pathType: Prefix
         backend:
           service:
-            name: store-service
+            name: campaign-service
             port:
               number: 80
       - path: /api/user/(.*)
