@@ -11,7 +11,7 @@ interface Product {
 }
 
 export const App: FunctionComponent = () => {
-  const [productList, setProductList] = useState([]);
+  const [productList, setProductList] = useState<Product[]>([]);
 
   useEffect(() => {
     const getProductList = async () => {
