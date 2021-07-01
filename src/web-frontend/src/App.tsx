@@ -136,7 +136,9 @@ export const App: FunctionComponent = () => {
                   <span className="text-lg">${ product.Price }</span>
                   <span className="text-lg">{ product.Rating }</span>
                 </div>
-                <button className="py-1 px-4 border border-gray-300 rounded-lg mb-4 shadow">Add +</button>
+                <button className="py-1 px-4 border border-gray-300 rounded-lg mb-4 shadow" onClick={() => {
+                  setShoppingCartList([...shoppingCartList.concat(product)])
+                }}>Add +</button>
               </div>
             );
           })}
