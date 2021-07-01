@@ -11,7 +11,19 @@ interface Product {
 }
 
 export const App: FunctionComponent = () => {
-  const [productList, setProductList] = useState<Product[]>([]);
+  const [apiProductList, setApiProductList] = useState<Product[]>([]);
+  const [pageProductList, setPageProductList] = useState<Product[]>([]);
+  const [userDialogMode, setUserDialogMode] = useState<boolean>(false);
+  const [userName, setUserName] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+
+  const onUserNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setUserName(event.target.value);
+  };
+
+  const onPasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(event.target.value);
+  };
 
   useEffect(() => {
     const getProductList = async () => {
