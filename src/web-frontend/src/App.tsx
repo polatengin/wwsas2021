@@ -41,7 +41,7 @@ export const App: FunctionComponent = () => {
         <div className="absolute inset-0 bg-gray-700 bg-opacity-25" onClick={() => setUserDialogMode(false)}></div>
       }
       <header className="flex my-4 items-center">
-        <StoreLogoIcon className="w-10 h-10 mr-2" />
+        <StoreLogoIcon className="w-10 h-10 mx-2" />
         <span className="text-3xl">WorldWide Software Architecture Summit</span>
         <span className="flex-grow"></span>
         <ShoppingCartIcon className="w-6 h-6" />
