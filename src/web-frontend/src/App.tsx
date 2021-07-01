@@ -52,8 +52,11 @@ export const App: FunctionComponent = () => {
               <div className="absolute top-0 w-4 h-4 transform rotate-45 -translate-y-2 inset-x-1/2 -translate-x-1/2 bg-white border-t border-l border-gray-400"></div>
               <input placeholder="username" type="text" value={userName} onChange={onUserNameChange} className="focus:outline-none w-full border shadow my-1" />
               <input placeholder="password" type="password" value={password} onChange={onPasswordChange} className="focus:outline-none w-full border shadow my-1" />
-              <button className="border shadow bg-blue-400 text-white w-full whitespace-nowrap my-1" onClick={() => {
-                // TODO
+              <button className="border shadow bg-blue-400 text-white w-full whitespace-nowrap my-1" onClick={async () => {
+                const response = await fetch("/api/user/login", {
+                  method: "POST",
+                  body: JSON.stringify({ userName, password })
+                });
               }}>Login</button>
             </div>
           }
