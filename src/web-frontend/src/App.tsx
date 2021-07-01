@@ -53,8 +53,8 @@ export const App: FunctionComponent = () => {
           <span className="flex-grow"></span>
           <span>View all ▸</span>
         </div>
-        <div>
-          {productList.map((product, index) => {
+        <div className="grid grid-flow-col gap-x-4 grid-cols-4">
+          {productList.slice(0, 4).map((product, index) => {
             return (
               <div key={index}>
                 asdasd
