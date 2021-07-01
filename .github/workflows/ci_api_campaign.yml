@@ -1,4 +1,4 @@
-name: ci_api_store
+name: ci_api_campaign
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - "src/api-store/**"
+      - "src/api-campaign/**"
 
 jobs:
   push:
@@ -21,7 +21,7 @@ jobs:
 
       - name: deploy new version
         run: |
-          cd ./src/api-store/
+          cd ./src/api-campaign/
 
           PROJECT_NAME="wwsas2021"
 
