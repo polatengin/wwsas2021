@@ -1,6 +1,6 @@
 FROM node:15.10.0-alpine AS builder
 
-WORKDIR /src/api-store
+WORKDIR /src/api-campaign
 
 COPY ./package*.json ./
 
