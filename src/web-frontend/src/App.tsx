@@ -54,6 +54,9 @@ export const App: FunctionComponent = () => {
         <span className="flex-grow"></span>
         <ShoppingCartIcon className="w-6 h-6" />
         <div className="relative">
+          {currentUser &&
+          <img className="absolute w-10 h-10 cursor-pointer rounded-full" src={currentUser?.ProfilePictureUrl} onClick={() => setUserDialogMode(!userDialogMode)} alt={currentUser?.Name} title={currentUser?.Name} />
+          }
           <UserIcon className="w-10 h-10 cursor-pointer" onClick={() => setUserDialogMode(!userDialogMode)} />
           {userDialogMode &&
             <div className="absolute top-10 -inset-x-10 bg-white p-3 border border-gray-400 text-center rounded-md">
