@@ -18,6 +18,8 @@ I'd like to see you in my session ([Building and Automating a solution with Micr
 Index
 
 * [Development Environment](#development-environment)
+* [Infrastructure as Code](#infrastructure-as-code)
+
 ## Development Environment
 
 For the project, we're using DevContainers to define the development environment. GitHub Codespaces are using DevContainers under-the-hood, so, one stone, two birds. We'll have both local and remote environments super easily, with the help of DevContainers.
