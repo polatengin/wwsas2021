@@ -29,7 +29,8 @@ export const App: FunctionComponent = () => {
     const getProductList = async () => {
       const response = await fetch("/api/product/get-list");
       const data = await response.json();
-      setProductList(data);
+      setApiProductList(data);
+      setPageProductList(data.slice(0, 5));
     };
     getProductList();
   }, []);
