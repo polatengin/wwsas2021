@@ -1,6 +1,14 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
 
-import { ShoppingCartIcon, StoreLogoIcon, TagIcon, UserIcon } from './Icons';
+import { ShoppingCartIcon, StarIcon, StoreLogoIcon, TagIcon, UserIcon } from './Icons';
+
+interface Product {
+	Name: string
+	Price: number
+	InStock: boolean
+	Rating: number
+	ImageUrl: string
+}
 
 export const App: FunctionComponent = () => {
   const [productList, setProductList] = useState([]);
