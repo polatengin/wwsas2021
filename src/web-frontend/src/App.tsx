@@ -23,10 +23,10 @@ export const App: FunctionComponent = () => {
   }, []);
 
   return (
-    <div className="flex flex-col bg-gray-300 h-3/4 px-4 rounded-xl">
+    <div className="flex flex-col bg-gray-200 h-3/4 px-4 rounded-xl">
       <header className="flex my-4 items-center">
-        <StoreLogoIcon className="w-6 h-6 mr-2" />
-        <span className="text-lg">WorldWide Software Architecture Summit</span>
+        <StoreLogoIcon className="w-10 h-10 mr-2" />
+        <span className="text-3xl">WorldWide Software Architecture Summit</span>
         <span className="flex-grow"></span>
         <ShoppingCartIcon className="w-6 h-6" />
         <UserIcon className="w-6 h-6" />
@@ -51,7 +51,7 @@ export const App: FunctionComponent = () => {
           <TagIcon className="w-6 h-6 mr-2" />
           <span className="text-xl">Discounted Products</span>
           <span className="flex-grow"></span>
-          <span>View all ▸</span>
+          <span className="cursor-pointer">View all ▸</span>
         </div>
         <div className="grid grid-flow-col gap-x-4 grid-cols-4">
           {productList.slice(0, 4).map((product, index) => {
