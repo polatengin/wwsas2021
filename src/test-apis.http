@@ -1,5 +1,12 @@
 @AKS_IP = 20.54.124.190
 
+POST http://{{AKS_IP}}/api/user/login
+content-type: application/json
+
+{ "userName": "sample", "password": "user" }
+
+###
+
 GET http://{{AKS_IP}}/api/user
 
 ###
