@@ -41,6 +41,13 @@ func main() {
 				Rating:   5,
 				ImageUrl: fmt.Sprintf("https://picsum.photos/100?color&random=%d", rand.Intn(99999)),
 			},
+			Product{
+				Name:     "ALOHA Chocolate Chip Cookie",
+				Price:    29.90,
+				InStock:  true,
+				Rating:   5,
+				ImageUrl: fmt.Sprintf("https://picsum.photos/100?color&random=%d", rand.Intn(99999)),
+			},
 		}
 
 		w.Header().Set("Content-Type", "application/json")
