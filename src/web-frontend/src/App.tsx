@@ -81,8 +81,7 @@ export const App: FunctionComponent = () => {
           <span className="flex-grow"></span>
           <span className="cursor-pointer">View all ▸</span>
         </div>
-        <div className="grid grid-flow-col gap-x-4 grid-cols-5">
-          {productList.slice(0, 5).map((product, index) => {
+          {pageProductList.map((product, index) => {
             return (
               <div key={index} className="flex flex-col items-center bg-white rounded-xl mt-12 shadow">
                 <img className="w-20 h-20 -mt-10 rounded-full border-2 border-gray-400 shadow" src={ product.ImageUrl } />
