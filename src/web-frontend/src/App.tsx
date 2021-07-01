@@ -101,6 +101,7 @@ export const App: FunctionComponent = () => {
         </div>
       </main>
       <footer className="my-4">
+        Total {apiProductList.length} product found...
       </footer>
     </div>
   );
