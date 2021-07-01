@@ -80,7 +80,29 @@ Let's start building the development environment
   "postCreateCommand": "gh auth login --web",
   ```
 
-Create [Dockerfile](./.devcontainer/Dockerfile) under the [.devcontainer](./.devcontainer/) folder
+* Create [Dockerfile](./.devcontainer/Dockerfile) under the [.devcontainer](./.devcontainer/) folder
+
+  We can start with the image of the framework we used in one of the _main_ projects, such as, [GoLang Docker Image](https://hub.docker.com/_/golang/), [Node Docker Image](https://hub.docker.com/_/node), [.Net SDK Docker Image](https://hub.docker.com/_/microsoft-dotnet-sdk/)
+
+  In this solution, we're gonna start from [GoLang Docker Image](https://hub.docker.com/_/golang/)
+
+  ```docker
+  FROM golang:1.16.5-buster
+  ```
+
+  PS: _At the time of writing this guideline, latest go version is 1.16.5, there may be newer versions when you read this_
+
+  In this [Dockerfile](./.devcontainer/Dockerfile), we're gonna install and configure all the tools, libraries, sdks that we'll use through-out the development, such as;
+
+  * [Go SDK](https://github.com/polatengin/wwsas2021/blob/main/.devcontainer/Dockerfile#L1)
+  * [Node SDK](https://github.com/polatengin/wwsas2021/blob/main/.devcontainer/Dockerfile#L24)
+  * [.Net 5 SDK](https://github.com/polatengin/wwsas2021/blob/main/.devcontainer/Dockerfile#L28)
+  * [Azure CLI](https://github.com/polatengin/wwsas2021/blob/main/.devcontainer/Dockerfile#L37)
+  * [GitHub CLI](https://github.com/polatengin/wwsas2021/blob/main/.devcontainer/Dockerfile#L40)
+  * [Docker CLI](https://github.com/polatengin/wwsas2021/blob/main/.devcontainer/Dockerfile#L17)
+  * [Helm](https://github.com/polatengin/wwsas2021/blob/main/.devcontainer/Dockerfile#L52)
+  * [Terraform](https://github.com/polatengin/wwsas2021/blob/main/.devcontainer/Dockerfile#L58)
+  * [kubectl](https://github.com/polatengin/wwsas2021/blob/main/.devcontainer/Dockerfile#L46)
 
 Create [.editorconfig](./.editorconfig) file at the root of the solution
 
