@@ -88,3 +88,16 @@ indent_size = 2
 insert_final_newline = true
 trim_trailing_whitespace = true
 ```
+
+Create [.gitignore](./.gitignore) file at the root of the solution and ignore unneeded files from the git system, for example,
+
+```ìni
+bin/
+obj/
+Properties/
+
+node_modules/
+dist/
+package-lock.json
+bundle.css
+```
