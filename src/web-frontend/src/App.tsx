@@ -21,6 +21,7 @@ export const App: FunctionComponent = () => {
   const [apiProductList, setApiProductList] = useState<Product[]>([]);
   const [pageProductList, setPageProductList] = useState<Product[]>([]);
   const [userDialogMode, setUserDialogMode] = useState<boolean>(false);
+  const [cartDialogMode, setCartDialogMode] = useState<boolean>(false);
   const [userName, setUserName] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [currentUser, setCurrentUser] = useState<User | null>(null);
