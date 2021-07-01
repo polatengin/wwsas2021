@@ -54,7 +54,18 @@ export const App: FunctionComponent = () => {
         <StoreLogoIcon className="w-10 h-10 mx-2" />
         <span className="text-3xl">WorldWide Software Architecture Summit</span>
         <span className="flex-grow"></span>
-        <ShoppingCartIcon className="w-6 h-6" />
+        <div className="relative mr-4">
+          <ShoppingCartIcon className="w-10 h-10 cursor-pointer" onClick={() => setCartDialogMode(!cartDialogMode)} />
+          {cartDialogMode &&
+            <div className="absolute top-10 -inset-x-10 bg-white px-3 pb-3 border border-gray-400 text-center rounded-md">
+              <div className="absolute top-0 w-4 h-4 transform rotate-45 -translate-y-2 inset-x-1/2 -translate-x-1/2 bg-white border-t border-l border-gray-400"></div>
+              {shoppingCartList.map(cart => {
+                return (
+                );
+              })}
+            </div>
+          }
+        </div>
         <div className="relative">
           {currentUser &&
           <img className="absolute w-10 h-10 cursor-pointer rounded-full" src={currentUser?.ProfilePictureUrl} onClick={() => setUserDialogMode(!userDialogMode)} alt={currentUser?.Name} title={currentUser?.Name} />
