@@ -23,6 +23,7 @@ export const App: FunctionComponent = () => {
   const [userDialogMode, setUserDialogMode] = useState<boolean>(false);
   const [userName, setUserName] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [currentUser, setCurrentUser] = useState<User | null>(null);
 
   const onUserNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUserName(event.target.value);
