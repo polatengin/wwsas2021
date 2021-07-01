@@ -1,9 +1,10 @@
+# ignored files and folders for csharp projects
 bin/
 obj/
-node_modules/
 Properties/
+
+# ignored files and folders for nodejs projects
+node_modules/
 dist/
-
 package-lock.json
-
 bundle.css
