@@ -73,7 +73,7 @@ export const App: FunctionComponent = () => {
               Get started
             </span>
           </div>
-          <img className="rounded-xl shadow" src="https://picsum.photos/300/200?color&random=2954" />
+          <img className="rounded-r-xl shadow" src="https://picsum.photos/300/200?color&random=2954" alt="Hero Section" />
         </div>
         <div className="flex items-center">
           <TagIcon className="w-6 h-6 mr-2" />
@@ -81,10 +81,11 @@ export const App: FunctionComponent = () => {
           <span className="flex-grow"></span>
           <span className="cursor-pointer" onClick={() => setPageProductList( pageProductList.length === 5 ? apiProductList : apiProductList.slice(0, 5))}>View all ▸</span>
         </div>
+        <div className="grid grid-flow-row gap-x-4 grid-cols-5">
           {pageProductList.map((product, index) => {
             return (
-              <div key={index} className="flex flex-col items-center bg-white rounded-xl mt-12 shadow">
-                <img className="w-20 h-20 -mt-10 rounded-full border-2 border-gray-400 shadow" src={ product.ImageUrl } />
+              <div key={index} className="flex flex-col items-center bg-white shadow hover:shadow-lg rounded-xl mt-12">
+                <img className="w-28 h-28 -mt-10 rounded-full border-2 border-gray-400 shadow" src={product.ImageUrl} alt={product.Name} />
                 <div className="w-full h-full p-3">
                   <span className="text-lg">{ product.Name }</span>
                   <span className="flex items-center">
