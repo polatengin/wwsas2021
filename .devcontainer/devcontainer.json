@@ -20,6 +20,7 @@
     "ms-azuretools.vscode-docker",
     "editorconfig.editorconfig",
     "vscode-icons-team.vscode-icons",
+    "davidanson.vscode-markdownlint",
     "humao.rest-client"
   ]
 }
