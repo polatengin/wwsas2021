@@ -61,6 +61,10 @@ export const App: FunctionComponent = () => {
               <div className="absolute top-0 w-4 h-4 transform rotate-45 -translate-y-2 inset-x-1/2 -translate-x-1/2 bg-white border-t border-l border-gray-400"></div>
               {shoppingCartList.map(cart => {
                 return (
+                  <div className="flex mt-2">
+                    <img className="w-6 h-6 rounded-full" src={cart.ImageUrl} />
+                    <span className="flex-grow text-right">${cart.Price}</span>
+                  </div>
                 );
               })}
             </div>
