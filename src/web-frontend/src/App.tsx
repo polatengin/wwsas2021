@@ -56,8 +56,18 @@ export const App: FunctionComponent = () => {
         <div className="grid grid-flow-col gap-x-4 grid-cols-4">
           {productList.slice(0, 4).map((product, index) => {
             return (
-              <div key={index}>
-                asdasd
+              <div key={index} className="flex flex-col items-center bg-white rounded-xl mt-12 shadow">
+                <img className="w-20 h-20 -mt-10 rounded-full border-2 border-gray-400 shadow" src={ product.ImageUrl } />
+                <div className="w-full p-3">
+                  <span className="text-lg">{ product.Name }</span>
+                  <span className="flex items-center">
+                    <StarIcon className="w-4 h-4 mr-1" />
+                    <span className="text-md">{ product.Rating } / 5</span>
+                  </span>
+                  <span className="text-lg">${ product.Price }</span>
+                  <span className="text-lg">{ product.Rating }</span>
+                </div>
+                <button className="py-1 px-4 border border-gray-300 rounded-lg mb-4 shadow">Add +</button>
               </div>
             );
           })}
