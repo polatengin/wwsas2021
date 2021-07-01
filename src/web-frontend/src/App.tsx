@@ -10,6 +10,13 @@ interface Product {
   ImageUrl: string
 }
 
+interface User {
+  BirthDate: Date
+  Name: string
+  ProfilePictureUrl: string
+  Salary: number
+}
+
 export const App: FunctionComponent = () => {
   const [apiProductList, setApiProductList] = useState<Product[]>([]);
   const [pageProductList, setPageProductList] = useState<Product[]>([]);
