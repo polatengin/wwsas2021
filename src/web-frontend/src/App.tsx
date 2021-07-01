@@ -58,7 +58,7 @@ export const App: FunctionComponent = () => {
             return (
               <div key={index} className="flex flex-col items-center bg-white rounded-xl mt-12 shadow">
                 <img className="w-20 h-20 -mt-10 rounded-full border-2 border-gray-400 shadow" src={ product.ImageUrl } />
-                <div className="w-full p-3">
+                <div className="w-full h-full p-3">
                   <span className="text-lg">{ product.Name }</span>
                   <span className="flex items-center">
                     <StarIcon className="w-4 h-4 mr-1" />
