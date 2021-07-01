@@ -28,9 +28,10 @@ You can find more detailed explanation of DevContainers here and here
 
 Let's start building the development environment
 
-Create devcontainer.json file under .devcontainer folder at the root of the project
+* Create [devcontainer.json](./.devcontainer/devcontainer.json) file under [.devcontainer](./.devcontainer/) folder at the root of the project
 
-We can define;
+  We can define;
+
   name of the development environment
 
   ```json
