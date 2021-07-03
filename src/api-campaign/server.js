@@ -5,6 +5,9 @@ app.get('/', function (req, res) {
   res.write("Hello world!")
 });
 
+app.get('/get-current', function (req, res) {
+});
+
 const server = app.listen(7000, function () {
   const host = server.address().address
   const port = server.address().port
