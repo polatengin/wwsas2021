@@ -8,7 +8,7 @@ app.get('/', function (req, res) {
 app.get('/get-current', function (req, res) {
   res.write({
     title: "Great Campaign",
-    pictureUrl: "https://picsum.photos/1920/1080",
+    pictureUrl: "https://picsum.photos/1920/100",
     gotoUrl: "https://devopstips.net"
   })
 });
