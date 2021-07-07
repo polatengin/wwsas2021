@@ -1,7 +1,7 @@
 {
   "name": "Development Environment",
   "dockerFile": "Dockerfile",
-  "forwardPorts": [ 5000, 7000, 8000 ],
+  "forwardPorts": [ 3000, 5000, 7000, 8000 ],
   "runArgs": [ "-v", "/var/run/docker.sock:/var/run/docker.sock" ],
   "postCreateCommand": "gh auth login --web",
   "settings": {
