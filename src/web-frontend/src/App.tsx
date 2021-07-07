@@ -17,6 +17,12 @@ interface User {
   Salary: number
 }
 
+interface Campaign {
+  Title: string
+  PictureUrl: string
+  GotoUrl: string
+}
+
 export const App: FunctionComponent = () => {
   const [apiProductList, setApiProductList] = useState<Product[]>([]);
   const [pageProductList, setPageProductList] = useState<Product[]>([]);
