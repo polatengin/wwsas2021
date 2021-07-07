@@ -23,7 +23,7 @@ spec:
       - name: campaign
         image: "{IMAGE}"
         ports:
-        - containerPort: 5000
+        - containerPort: 7000
 ---
 apiVersion: v1
 kind: Service
