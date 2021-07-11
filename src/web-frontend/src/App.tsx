@@ -62,6 +62,7 @@ export const App: FunctionComponent = () => {
 
   return (
     <div className="flex flex-col bg-gray-200 h-min-3/4 px-4 select-none rounded-xl">
+      <a href={currentCampaign?.GotoUrl}><img src={currentCampaign?.PictureUrl} alt={currentCampaign?.Title} /></a>
       {userDialogMode &&
         <div className="absolute inset-0 bg-gray-700 bg-opacity-25" onClick={() => setUserDialogMode(false)}></div>
       }
