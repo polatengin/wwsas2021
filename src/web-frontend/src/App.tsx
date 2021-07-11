@@ -32,6 +32,7 @@ export const App: FunctionComponent = () => {
   const [userName, setUserName] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [currentUser, setCurrentUser] = useState<User | null>(null);
+  const [currentCampaign, setCurrentCampaign] = useState<Campaign | null>(null);
 
   const onUserNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUserName(event.target.value);
