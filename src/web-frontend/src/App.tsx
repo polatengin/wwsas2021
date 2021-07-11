@@ -18,9 +18,9 @@ interface User {
 }
 
 interface Campaign {
-  Title: string
-  PictureUrl: string
-  GotoUrl: string
+  title: string
+  pictureUrl: string
+  gotoUrl: string
 }
 
 export const App: FunctionComponent = () => {
@@ -62,7 +62,7 @@ export const App: FunctionComponent = () => {
 
   return (
     <div className="flex flex-col bg-gray-200 h-min-3/4 px-4 select-none rounded-xl">
-      <a href={currentCampaign?.GotoUrl}><img src={currentCampaign?.PictureUrl} alt={currentCampaign?.Title} /></a>
+      <a href={currentCampaign?.gotoUrl} target="_blank" className="-mx-4"><img src={currentCampaign?.pictureUrl} alt={currentCampaign?.title} className="rounded-t-xl" /></a>
       {userDialogMode &&
         <div className="absolute inset-0 bg-gray-700 bg-opacity-25" onClick={() => setUserDialogMode(false)}></div>
       }
