@@ -57,6 +57,7 @@ export const App: FunctionComponent = () => {
     };
 
     getProductList();
+    getCurrentCampaign();
   }, []);
 
   return (
