@@ -49,6 +49,13 @@ export const App: FunctionComponent = () => {
       setApiProductList(data);
       setPageProductList(data.slice(0, 5));
     };
+
+    const getCurrentCampaign = async () => {
+      const response = await fetch("/api/campaign/get-current");
+      const data = await response.json();
+      setCurrentCampaign(data);
+    };
+
     getProductList();
   }, []);
 
