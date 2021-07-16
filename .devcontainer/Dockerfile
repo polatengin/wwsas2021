@@ -49,6 +49,9 @@ RUN apt-get update \
     && apt-get update \
     && apt-get install -y kubectl \
     #
+    # Install k9s
+    && curl -sS https://webinstall.dev/k9s | bash \
+    #
     # Install Helm
     && curl https://baltocdn.com/helm/signing.asc | apt-key add - \
     && echo "deb https://baltocdn.com/helm/stable/debian/ all main" | tee /etc/apt/sources.list.d/helm-stable-debian.list \
