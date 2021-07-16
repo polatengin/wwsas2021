@@ -176,3 +176,11 @@ bundle.css
         number: 80
 ```
 
+## Projects
+
+There are 4 projects in the solution;
+
+* api-campaing: NodeJs project that handles /api/campaign/* requests
+* api-product: GoLang project that handles /api/product/* requests
+* api-user: .Net 5 project that handles /api/user/* requests
+* web-frontend: React project that renders frontend
