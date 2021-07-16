@@ -17,7 +17,7 @@ POST http://{{AKS_IP}}/api/user/get-user-list
 
 ###
 
-GET http://{{AKS_IP}}/api/user/
+GET http://{{AKS_IP}}/api/campaign/
 
 ###
 
