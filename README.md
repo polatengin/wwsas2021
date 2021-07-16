@@ -298,3 +298,13 @@ app.UseEndpoints(endpoints =>
   });
 });
 ```
+
+### Web FrontEnd
+
+Execute following command to create the project;
+
+```bash
+npx create-react-app --template typescript . && npm i autoprefixer tailwindcss
+```
+
+Open [App.tsx](./src/web-frontend/src/App.tsx) file and modify the content with the codes from this repo.
