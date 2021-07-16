@@ -28,4 +28,7 @@ GET http://{{AKS_IP}}/api/campaign/get-current
 GET http://{{AKS_IP}}/api/product/
 
 ###
+
+GET http://{{AKS_IP}}/api/product/get-list
+
 ###
