@@ -64,14 +64,14 @@ then
   az acr login --name "${PROJECT_NAME}acr"
 fi
 
+echo "Setting a GitHub Secret for GitHub Actions"
+
+AZURE_CREDENTIALS=$(az ad sp create-for-rbac --name "${PROJECT_NAME}" --role "Contributor" --sdk-auth)
+
+gh secret set "AZURE_CREDENTIALS" -b "${AZURE_CREDENTIALS}"
+
 echo "Installing nginx as the Ingress Controller into the Kubernetes"
 
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.34.1/deploy/static/provider/cloud/deploy.yaml
-
-echo "Setting a GitHub Secret for GitHub Actions"
-
-AZURE_CREDENTIALS=$(az ad sp create-for-rbac --name "wwsas2021" --role Contributor --sdk-auth)
-
-gh secret set "AZURE_CREDENTIALS" -b "${AZURE_CREDENTIALS}"
 
 kubectl apply -f ./ingress.yml
