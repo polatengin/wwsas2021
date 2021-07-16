@@ -144,3 +144,35 @@ bundle.css
 * Create new Service Principal and set it as secret to the GitHub CLI
 * Install nginx into the Azure Kubernetes Services (AKS) instance as Ingress Controller to handle incoming traffic
 * Apply ingress.yml config onto the Ingress Controller to associate endpoints to services
+
+```yaml
+- path: /api/product/(.*)
+  pathType: Prefix
+  backend:
+    service:
+      name: product-service
+      port:
+        number: 80
+- path: /api/campaign/(.*)
+  pathType: Prefix
+  backend:
+    service:
+      name: campaign-service
+      port:
+        number: 80
+- path: /api/user/(.*)
+  pathType: Prefix
+  backend:
+    service:
+      name: user-service
+      port:
+        number: 80
+- path: /(.*)
+  pathType: Prefix
+  backend:
+    service:
+      name: frontend-service
+      port:
+        number: 80
+```
+
