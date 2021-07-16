@@ -131,3 +131,16 @@ bundle.css
 ```
 
 ## Infrastructure as Code
+
+[./iac/setup.sh](./iac/setup.sh) script file includes all the Bash code to do below checks, provision below resources on Azure and complete the setup by executing below;
+
+* Check if Azure CLI is exists, if not, install Azure CLI
+* Check if GitHub CLI is exists, if not, install GitHub CLI and proceed to login
+* If Azure CLI is not loggedin yet, proceed to login to Azure
+* Create a Resource Group on Azure
+* Create an Azure Container Registry (ACR), to hold project specific Docker Images
+* Create an Azure Kubernetes Services (AKS) linked to the Azure Container Registry (ACR), to have a compute power to run project Docker Images
+* Reset kubectl config and set current context to Azure Kubernetes Services (AKS) instance
+* Create new Service Principal and set it as secret to the GitHub CLI
+* Install nginx into the Azure Kubernetes Services (AKS) instance as Ingress Controller to handle incoming traffic
+* Apply ingress.yml config onto the Ingress Controller to associate endpoints to services
