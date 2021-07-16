@@ -13,7 +13,7 @@ content-type: application/json
 
 ###
 
-GET http://{{AKS_IP}}/api/user
+POST http://{{AKS_IP}}/api/user/get-user-list
 
 ###
 
