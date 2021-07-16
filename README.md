@@ -220,3 +220,44 @@ const server = app.listen(7000, function () {
   console.log("Example app listening at http://%s:%s", host, port)
 });
 ```
+
+### Product API
+
+Execute following command to create the project;
+
+```bash
+go mod init github.com/polatengin/wwsas2021 && touch main.go
+```
+
+Open [main.go](./src/api-product/main.go) and add following golang code;
+
+```go
+package main
+
+import (
+  "encoding/json"
+  "fmt"
+  "log"
+  "net/http"
+)
+
+type Product struct {
+  Name     string
+  Price    float32
+  InStock  bool
+  Rating   int
+  ImageUrl string
+}
+type ProductList []Product
+
+func main() {
+  http.HandleFunc("/get-list", func(w http.ResponseWriter, r *http.Request) {
+    productList := ProductList{ /* Removed for the sake of brevity */ }
+
+    w.Header().Set("Content-Type", "application/json")
+    json.NewEncoder(w).Encode(productList)
+  })
+
+  log.Fatal(http.ListenAndServe(":8000", nil))
+}
+```
