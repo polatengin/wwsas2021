@@ -21,6 +21,8 @@ GET http://{{AKS_IP}}/api/campaign/
 
 ###
 
-POST http://{{AKS_IP}}/api/user/get-user-list
+GET http://{{AKS_IP}}/api/campaign/get-current
+
+###
 
 ###
