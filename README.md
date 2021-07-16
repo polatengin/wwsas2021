@@ -184,3 +184,39 @@ There are 4 projects in the solution;
 * api-product: GoLang project that handles /api/product/* requests
 * api-user: .Net 5 project that handles /api/user/* requests
 * web-frontend: React project that renders frontend
+
+### Campaign API
+
+Execute following command to create the project;
+
+```bash
+npm init --force && npm i express && touch server.js
+```
+
+Add following script into the [package.json](./src/api-campaign/package.json) file;
+
+```json
+"scripts": {
+  "start": "node server.js"
+}
+```
+
+Open [server.js](./src/api-campaign/server.js) and add following javascript code;
+
+```js
+const app = require('express')();
+
+app.get('/get-current', function (req, res) {
+  res.send(JSON.stringify({
+    title: "Great Campaign",
+    pictureUrl: "https://picsum.photos/1920/100",
+    gotoUrl: "https://devopstips.net"
+  }));
+});
+
+const server = app.listen(7000, function () {
+  const host = server.address().address
+  const port = server.address().port
+  console.log("Example app listening at http://%s:%s", host, port)
+});
+```
