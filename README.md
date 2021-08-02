@@ -258,7 +258,7 @@ func main() {
     json.NewEncoder(w).Encode(productList)
   })
 
-  log.Fatal(http.ListenAndServe(":8000", nil))
+  log.Fatal(http.ListenAndServe(":9000", nil))
 }
 ```
 
