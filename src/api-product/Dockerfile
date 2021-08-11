@@ -1,3 +1,3 @@
 FROM golang:onbuild
 
-EXPOSE 8000
+EXPOSE 9000
