@@ -23,7 +23,7 @@ spec:
       - name: product
         image: "{IMAGE}"
         ports:
-        - containerPort: 8000
+        - containerPort: 9000
 ---
 apiVersion: v1
 kind: Service
